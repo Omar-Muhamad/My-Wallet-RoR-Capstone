@@ -24,15 +24,15 @@ default: &default
 development:
   <<: *default
   database: My_Wallet_RoR_Capstone_development
-
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
+
   # the same name as the operating system user running Rails.
-  #username: My_Wallet_RoR_Capstone
+  username: <%= Rails.application.credentials.local[:db_username] %>
 
   # The password associated with the postgres role (username).
-  #password:
+  password: <%= Rails.application.credentials.local[:db_password] %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -41,7 +41,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  #port: 5432
+  port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -58,7 +58,9 @@ development:
 test:
   <<: *default
   database: My_Wallet_RoR_Capstone_test
-
+  
+  username: <%= Rails.application.credentials.local[:db_username] %>
+  password: <%= Rails.application.credentials.local[:db_password] %>
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -82,5 +84,3 @@ test:
 production:
   <<: *default
   database: My_Wallet_RoR_Capstone_production
-  username: My_Wallet_RoR_Capstone
-  password: <%= ENV["MY_WALLET_ROR_CAPSTONE_DATABASE_PASSWORD"] %>

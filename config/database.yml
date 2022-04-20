@@ -37,7 +37,7 @@ development:
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  #host: localhost
+  host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
@@ -59,8 +59,8 @@ test:
   <<: *default
   database: My_Wallet_RoR_Capstone_test
   
-  username: <%= Rails.application.credentials.local[:db_username] %>
-  password: <%= Rails.application.credentials.local[:db_password] %>
+  username: <%= Rails.application.credentials.local[:db_name] %>
+  password: <%= Rails.application.credentials.local[:db_pass] %>
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.

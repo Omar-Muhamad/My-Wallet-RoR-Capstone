@@ -1,4 +1,5 @@
 class CategoryTransactionsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_category_transaction, only: %i[ show edit update destroy ]
 
   # GET /category_transactions or /category_transactions.json

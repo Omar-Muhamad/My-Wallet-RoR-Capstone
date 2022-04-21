@@ -1,6 +1,7 @@
 class CategoryTransactionsController < ApplicationController
   load_and_authorize_resource
   before_action :set_category_transaction, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /category_transactions or /category_transactions.json
   def index

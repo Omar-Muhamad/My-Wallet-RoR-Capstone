@@ -16,6 +16,7 @@
   <body class="font-[Proxima]">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete %>
     <main>
       <%= yield %>
     </main>

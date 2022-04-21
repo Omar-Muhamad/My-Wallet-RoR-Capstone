@@ -1,4 +1,7 @@
 class Transaction < ApplicationRecord
   belongs_to :user
-  has_many :category_transactions
+  has_and_belongs_to_many :categories
+
+  validates :name, presence: true
+  validates :amount, numericality: true
 end

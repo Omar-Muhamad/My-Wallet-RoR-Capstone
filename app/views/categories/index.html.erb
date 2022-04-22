@@ -1,5 +1,13 @@
 <div>
-  <h1>Categories</h1>
+  <header class="w-full p-3 bg-[#3778c2] text-white text-lg flex justify-between">
+    <nav>
+      <%= link_to splash_index_path do %>
+        <i class="fa-solid fa-chevron-left fa-lg"></i>
+      <% end %>
+    </nav>
+    <h1 class="ml-[-15px]">LOGIN<h1>
+    <span></span>
+  </header>
 
   <ul id="categories">
     <% @categories.each do |category| %>

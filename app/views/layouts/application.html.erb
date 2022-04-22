@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="font-[Proxima]">
+  <body class="font-[Proxima] tracking-wide bg-[#f5f6f8] min-h-screen">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= button_to "Logout", destroy_user_session_path, method: :delete %>

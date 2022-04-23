@@ -16,8 +16,9 @@
   </head>
 
   <body class="font-[Proxima] tracking-wide bg-[#f5f6f8] min-h-screen">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <p class="notice text-white bg-green-400 p-4 text-center"><%= notice %></p>
+    <% end %>
     <main>
       <%= yield %>
     </main>

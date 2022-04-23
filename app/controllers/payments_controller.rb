@@ -29,7 +29,7 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to payment_url(@payment), notice: "Payment was successfully created." }
+        format.html { redirect_to category_url(@category), notice: "Payment was successfully created." }
         format.json { render :show, status: :created, location: @payment }
       else
         format.html { render :new, status: :unprocessable_entity }

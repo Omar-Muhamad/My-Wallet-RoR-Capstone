@@ -81,3 +81,5 @@ gem 'cancancan'
 gem "esbuild-rails", "~> 0.1.4"
 
 gem "ffi", "~> 1.15"
+
+gem 'rubocop', '>= 1.0', '< 2.0'

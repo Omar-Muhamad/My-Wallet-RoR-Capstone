@@ -1,4 +1,4 @@
-<%= form_with(model: payment) do |form| %>
+<%= form_with(model: payment, class: "w-full mt-10 flex flex-col items-center gap-2") do |form| %>
   <% if payment.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
@@ -11,20 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name, placeholder: "Transaction name" %>
+  <div class="w-full">
+    <%= form.text_field :name, placeholder: "Transaction name", class: "w-full p-3" %>
+  
+    <%= form.text_field :amount, placeholder: "Transaction amount", class: "mt-2 w-full p-3" %>
+
+    <%= form.collection_select :category_ids, Category.all, :id, :name, { include_blank: false }, { multiple: true, class: " mt-2 w-full p-3" } %>
   </div>
 
-  <div>
-    <%= form.label :amount, style: "display: block" %>
-    <%= form.text_field :amount, placeholder: "Transaction amount" %>
-  </div>
-
-  <div>
-<%= form.collection_select :category_ids, Category.all, :id, :name, { include_blank: true }, { multiple: true } %>  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="absolute bottom-0 w-full text-center bg-[#5fb523] p-4 text-white">
+    <div class="w-full border-[1px] border-white py-4 cursor-pointer">
+      <%= form.submit "Save", class: "w-full text-lg" %>
+    </div>
   </div>
 <% end %>

@@ -1,9 +1,13 @@
-<h1>New Transaction</h1>
-
-<%= render "form", payment: @payment %>
-
-<br>
-
-<div>
-  <%= link_to "Back to payments", payments_path %>
+<div class="min-h-screen relative">
+  <header class="w-full p-3 bg-[#3778c2] text-white text-lg flex justify-between">
+    <nav>
+      <%= link_to category_path(params[:format]) do %>
+        <i class="fa-solid fa-chevron-left fa-lg"></i>
+      <% end %>
+    </nav>
+    <h1 class="ml-[-15px]">NEW TRANSACTION<h1>
+    <span></span>
+  </header>
+  <%= render "form", payment: @payment %>
 </div>
+

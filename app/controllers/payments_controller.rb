@@ -14,8 +14,6 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
-    p 'hhhhhhhhh'
-    p params
     @payment = Payment.new
   end
 

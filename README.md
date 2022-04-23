@@ -9,6 +9,10 @@ This is the live site [link](https://my-wallet-rails.herokuapp.com/) to my Proje
 
 ## Built With
 
+This is the video demo [link](https://www.loom.com/share/b487b2bbb2b84a79b209f86eb18aeb9d) shawing my capstone project.
+
+## Built With
+
 - Ruby.
 - Rails.
 - PostgreSQL.

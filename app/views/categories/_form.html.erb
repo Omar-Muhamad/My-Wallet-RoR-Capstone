@@ -11,17 +11,10 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name, placeholder: 'Add category name' %>
-  </div>
+  <%= form.text_field :name, placeholder: 'Add category name' %>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon, placeholder: 'Add image path' %>
-  </div>
+  <%= form.text_field :icon, placeholder: 'Add image path' %>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  <%= form.submit %>
+
 <% end %>

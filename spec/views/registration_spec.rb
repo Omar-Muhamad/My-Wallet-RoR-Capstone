@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Register page', type: :feature do
   before :each do
-    @user1 = User.new(name: 'Omar', email: 'eng.omarmuhammad@gmail.com', password: 'asd123', password_confirmation: 'asd123')
+    @user1 = User.new(name: 'Omar', email: 'eng.omarmuhammad@gmail.com', password: 'asd123',
+                      password_confirmation: 'asd123')
     visit new_user_registration_path
   end
 
